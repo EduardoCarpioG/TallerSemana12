@@ -37,7 +37,7 @@ void registrarLibro(Libro biblioteca[], int *cantidad) {
     fgets(nuevoLibro.autor, 50, stdin);
     nuevoLibro.autor[strcspn(nuevoLibro.autor, "\n")] = '\0'; // Eliminar salto de línea
 
-    printf("Ingrese año de publicacion: ");
+    printf("Ingrese el year de publicacion: ");
     scanf("%d", &nuevoLibro.anio);
 
     strcpy(nuevoLibro.estado, "Disponible");
@@ -53,7 +53,7 @@ void mostrarLibros(Libro biblioteca[], int cantidad) {
         return;
     }
 
-    printf("%-5s %-30s %-20s %-10s %-15s\n", "ID", "Titulo", "Autor", "Año", "Estado");
+    printf("%-5s %-30s %-20s %-10s %-15s\n", "ID", "Titulo", "Autor", "Year", "Estado");
     for (int i = 0; i < cantidad; i++) {
         printf("%-5d %-30s %-20s %-10d %-15s\n",
                biblioteca[i].id,
@@ -79,7 +79,7 @@ void buscarLibro(Libro biblioteca[], int cantidad) {
 
         for (int i = 0; i < cantidad; i++) {
             if (biblioteca[i].id == idBuscado) {
-                printf("ID: %d\nTitulo: %s\nAutor: %s\nAño: %d\nEstado: %s\n",
+                printf("ID: %d\nTitulo: %s\nAutor: %s\nYear: %d\nEstado: %s\n",
                        biblioteca[i].id,
                        biblioteca[i].titulo,
                        biblioteca[i].autor,
@@ -95,7 +95,7 @@ void buscarLibro(Libro biblioteca[], int cantidad) {
 
         for (int i = 0; i < cantidad; i++) {
             if (strcasecmp(biblioteca[i].titulo, tituloBuscado) == 0) {
-                printf("ID: %d\nTitulo: %s\nAutor: %s\nAño: %d\nEstado: %s\n",
+                printf("ID: %d\nTitulo: %s\nAutor: %s\nYear: %d\nEstado: %s\n",
                        biblioteca[i].id,
                        biblioteca[i].titulo,
                        biblioteca[i].autor,

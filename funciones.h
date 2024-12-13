@@ -15,5 +15,5 @@ void mostrarLibros(Libro biblioteca[], int cantidad);
 void buscarLibro(Libro biblioteca[], int cantidad);
 void actualizarEstado(Libro biblioteca[], int cantidad);
 void eliminarLibro(Libro biblioteca[], int *cantidad);
-
+ 
 #endif

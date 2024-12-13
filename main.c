@@ -5,7 +5,7 @@ int main() {
     Libro biblioteca[MAX_LIBROS];
     int cantidadLibros = 0;
     int opcion;
-
+ 
     inicializarBiblioteca(biblioteca, &cantidadLibros);
 
     do {
